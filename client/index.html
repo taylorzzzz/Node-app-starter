@@ -1,0 +1,32 @@
+<html lang="en">
+    <head>
+        <title></title>
+
+        <link rel="shortcut icon" href="assets/favicon.png">
+
+        <link href="build/css/style.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+
+        <h1>Node App Boilerplate</h1>
+
+        <p>This is some boilerplate for a Node/Express app.</p>
+        
+
+        <script>
+            // Sends an example 'API Request' 2
+            // after the page loads.
+            
+            setTimeout(() => {
+
+                fetch('/api/example')
+                    .then(function(response) {
+                        console.log(response);
+                    });
+                    
+            }, 2000);
+            
+        </script>
+    </body>
+</html>
