@@ -8,9 +8,22 @@ The back-end file structure also includes:
 * Controllers - Where route handlers/controllers go. 
 * Models - Where we can define any Mongoose Schemas we have.
 
-On the front-end a small Webpack configuration is set up to allow for Javascript compilation with Babel as well as compilation of SASS to CSS. 
+On the front-end a small Webpack configuration is set up to allow for Javascript compilation with Babel. The following npm script tells
+webpack to watch our js files for changes and rebuilds upon updates:
 
-All static files meant for the front-end including HTML files are served up by express from the client directory. 
-# Project Title
+~~~
+# Runs webpack --progress --watch
+npm run watch
+~~~
+
+SASS compilation meanwhile
+is handled node-sass and can be run using: 
+
+~~~
+# Runs node-sass -w client/src/sass/main.scss client/build/css/style.css
+npm compile:sass  
+~~~
+
+All static files meant for the front-end including HTML files are served up by Express from the client directory. 
 
 ## To Use
