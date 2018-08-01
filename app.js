@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 const apiRoutes = require('./Routes/api');
 
@@ -18,7 +19,12 @@ const app = express();
 
 
 
-            /* Middleware and Route Handling */
+/* Middleware and Route Handling */
+
+// parses application/json bodies
+app.use(bodyParser.json());
+// parses url encoded bodies 
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /* Allows us to serve up static files */
 app.use(express.static('client'));
